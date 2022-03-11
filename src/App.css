@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.all {
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(0, 152, 155, 1) 0.1%,
+    rgba(0, 94, 120, 1) 94.2%
+  );
+  background-image: linear-gradient(
+    180.3deg,
+    rgba(221, 221, 221, 1) 5.5%,
+    rgba(110, 136, 161, 1) 90.2%
+  );
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 900px;
+  height: 100vh;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 4rem;
+  animation: split 2s;
+  margin-bottom: 40px;
+}
+
+input {
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none !important;
+  font-size: 1rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+button:hover {
+  opacity: 0.5;
+}
+
+.load {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+}
+
+main {
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+  color: black;
+  font-size: 1.5rem;
+}
+
+span {
+  padding: 5px 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.social svg {
+  transition: all ease 0.3s;
+}
+
+.social svg:hover {
+  opacity: 0.5;
+  animation: split2 2s;
+}
+
+@keyframes split {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@media (max-width: 541px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 416px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 364px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 339px) {
+  .containerInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+  button {
+    width: 60%;
+  }
+}
